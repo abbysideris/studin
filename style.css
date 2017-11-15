@@ -1,0 +1,22 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  padding: 12px 25px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: #0599bf;
+}
+
+.btn-kipaso {
+  background-color: #06add8;
+  color: white;
+}
