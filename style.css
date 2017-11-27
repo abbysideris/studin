@@ -1,22 +1,268 @@
 body {
-  font-family: 'Roboto', sans-serif;
-}
-
-.btn {
-  font-size: 13px;
-  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans Caption', sans-serif;
+  color: #323232;
   font-weight: bold;
-  border: none;
-  outline: none;
-  padding: 12px 25px;
-  text-transform: uppercase;
+  font-size: 16px;
 }
 
-.btn:hover {
-  background-color: #0599bf;
+/*Стили слайдов*/
+section {  
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.btn-kipaso {
+/*Стили заголовков*/
+h1, h2, h3 {
+  text-shadow: 0px 0px 1px #323232;
+  text-align: center;  
+}
+
+h1 {
+  font-size: 35px;  
+}
+
+h2 {
+  font-size: 30px;
+}
+
+/*Стили строк*/
+.row {
+  display: flex;  
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*Стили колонок*/
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*Кнопки*/
+.button {
+  margin-top: 20px;
+  width: 90px;
+  display: block;
+  text-decoration: none;
+  border-radius: 2px;
+  padding: 10px 28px;
   background-color: #06add8;
   color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #11a8ce;
+  box-shadow: 0px 0px 1px 0px black;
+}
+
+/*Первый слайд*/
+.first  {
+  flex-direction: row; 
+  
+}
+
+.first_left {
+  flex-basis: 40%;
+  background: url('http://kipaso.ru/assets/images/s1_bg.jpg');
+  background-position: 100% 50%;
+  background-size: cover;  
+}
+
+.first_right {
+  background-color: #fefefe;
+  flex-basis: 60%;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 1.7em; 
+}
+
+.first_right .logo { 
+  position: relative;
+  top: 5%;
+  right: 25%;
+  align-self: flex-end;
+  opacity: 0.5;
+  transform: scale(1) rotate(-1deg);  
+}
+
+/*Второй слайд*/
+.second { 
+  padding: 0 25%;
+  box-sizing: border-box;
+  text-align: left;  
+  line-height: 2em;
+  background-color: rgba(9,172,215, 0.1);
+}
+
+/*Третий слайд*/
+.third {  
+  justify-content: center;
+  align-items: center; 
+}
+
+.third .column {
+  flex-basis: 40%;  
+  justify-content: space-around;
+}
+
+.column.manometr {
+  flex-basis: 40%;  
+}
+
+.column .tech {
+  
+  text-align: center;
+  
+}
+
+/*Четвертый слайд*/
+.fourth {
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(9,172,215, 0.1);
+  
+}
+
+.fourth .row-wrap {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.fourth .column {  
+  display: flex;
+  justify-content: center;
+  flex-basis: 12%;
+  padding: 3% 4%;
+  margin-right: 2%;  
+  border-radius: 50%;
+  border: 2px solid rgba(9,172,215, 0.7);
+  line-height: 1.5em;
+  font-size: 17px;
+  border-style: dashed;
+}
+
+.fourth .column:nth-child(2n+1):hover {
+  border-style: solid;
+  
+}
+
+.fourth .column:nth-child(2n):hover {
+  transform: scale(1.1) rotate(360deg);
+}
+
+.column.arrow {
+  justify-content: center;
+  align-items: center;
+  flex-basis: 1%;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  border: none;
+  padding: 0;
+ }
+
+/*Пятый слайд */
+.fifth  {  
+ justify-content: center;
+ line-height: 1.7em;
+}
+
+.fifth .adress-main {
+  font-size: 20px;
+  border-radius: 20px;  
+}
+
+
+
+.fifth .map {
+  justify-content: flex-start;
+  height: 90vh;
+}
+
+.fifth .column:nth-child(1) {
+  flex-basis: 70%;
+}
+
+.fifth .column:nth-child(2) {
+  align-items: center;
+  flex-basis: 30%;
+}
+
+
+
+
+/*Футер*/
+footer .vertical-scrolling {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-weight: normal;
+  text-align: center;
+  
+}
+
+@media screen and (max-width: 1157px) {  
+  
+  .third .manometr {
+    display: none;
+  }
+  
+  .third .column {
+     
+  }
+  
+  .third .tech {
+    flex-basis: 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  
+    
+  }  
+}
+
+@media screen and (max-width: 1000px) {  
+  
+  section.fourth {
+    
+  }
+  
+  section.fourth .column {
+    margin: 0;
+    margin-bottom: 5%;
+    
+  }
+  
+  section.third .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    padding: 10%;
+    
+  }
+  
+  section.fourth .row-wrap {
+    flex-direction: column;
+  }
+  
+  section.fourth .row-wrap .arrow {
+    transform: rotate(90deg);
+  }
 }
